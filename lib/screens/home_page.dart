@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../repositories/service_repository.dart';
 import '../widgets/hero_header.dart';
 import '../widgets/service_card.dart';
@@ -118,6 +119,28 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                         ],
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Contáctenos',
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 8),
+                      TextButton.icon(
+                        onPressed: () async {
+                          final Uri facebookUrl = Uri.parse(
+                            'https://www.facebook.com/share/1aSU2sftvx/',
+                          );
+                          if (!await launchUrl(facebookUrl)) {
+                            // ignore: avoid_print
+                            print('Could not launch $facebookUrl');
+                          }
+                        },
+                        icon: const Icon(Icons.facebook),
+                        label: const Text('Perfil de Facebook'),
                       ),
                       const SizedBox(height: 16),
                       Text(
