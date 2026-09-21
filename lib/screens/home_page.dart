@@ -121,18 +121,24 @@ class HomePage extends StatelessWidget {
                       Icon(
                         Icons.forum_outlined,
                         size: 42,
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Colors.white,
                       ),
                       const SizedBox(height: 16),
                       Text(
                         'Contáctanos',
-                        style: Theme.of(context).textTheme.displaySmall,
+                        style: Theme.of(context)
+                            .textTheme
+                            .displaySmall
+                            ?.copyWith(color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 12),
                       Text(
                         'Estamos listos para ayudarte con el diagnóstico y la solución de tus equipos.',
-                        style: Theme.of(context).textTheme.titleMedium,
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium
+                            ?.copyWith(color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 28),
@@ -157,14 +163,14 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 32),
-                      const Divider(),
+                      const Divider(color: Colors.white),
                       const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
                             Icons.location_on_outlined,
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Colors.white,
                           ),
                           const SizedBox(width: 8),
                           Flexible(
@@ -174,6 +180,7 @@ class HomePage extends StatelessWidget {
                                   .textTheme
                                   .bodyMedium
                                   ?.copyWith(
+                                    color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                               textAlign: TextAlign.center,
@@ -184,7 +191,10 @@ class HomePage extends StatelessWidget {
                       const SizedBox(height: 12),
                       Text(
                         'Los valores pueden variar según repuestos, complejidad y servicio a domicilio.',
-                        style: Theme.of(context).textTheme.bodyMedium,
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyMedium
+                            ?.copyWith(color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                     ],
