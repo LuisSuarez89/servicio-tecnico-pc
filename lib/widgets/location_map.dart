@@ -26,7 +26,8 @@ class _LocationMapState extends State<LocationMap> {
 
     ui_web.platformViewRegistry.registerViewFactory(_mapViewType, (viewId) {
       return web.HTMLIFrameElement()
-        ..src = 'https://www.google.com/maps?q=Tocancip%C3%A1%2C%20Cundinamarca&z=13&output=embed'
+        ..src =
+            'https://www.google.com/maps?q=Tocancip%C3%A1%2C%20Cundinamarca&z=13&output=embed'
         ..style.border = '0'
         ..style.height = '100%'
         ..style.width = '100%'

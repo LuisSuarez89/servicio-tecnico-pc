@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const Color primaryColor = Color(0xFF0D6EFD); // Un azul moderno y vibrante
+  static const Color primaryColor =
+      Color(0xFF0D6EFD); // Un azul moderno y vibrante
   static const Color secondaryColor = Color(0xFF6C757D);
   static const Color backgroundColor = Color(0xFFF8F9FA);
   static const Color surfaceColor = Colors.white;
@@ -34,15 +35,26 @@ class AppTheme {
       ),
       textTheme: const TextTheme(
         displayLarge: TextStyle(
-            fontSize: 48, fontWeight: FontWeight.w900, color: onSurfaceColor, letterSpacing: -1.5),
+            fontSize: 48,
+            fontWeight: FontWeight.w900,
+            color: onSurfaceColor,
+            letterSpacing: -1.5),
         displayMedium: TextStyle(
-            fontSize: 36, fontWeight: FontWeight.w800, color: onSurfaceColor, letterSpacing: -1.0),
+            fontSize: 36,
+            fontWeight: FontWeight.w800,
+            color: onSurfaceColor,
+            letterSpacing: -1.0),
         headlineLarge: TextStyle(
-            fontSize: 32, fontWeight: FontWeight.bold, color: onSurfaceColor, letterSpacing: -0.5),
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: onSurfaceColor,
+            letterSpacing: -0.5),
         headlineMedium: TextStyle(
             fontSize: 28, fontWeight: FontWeight.bold, color: onSurfaceColor),
-        titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: onSurfaceColor),
-        titleMedium: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: onSurfaceColor),
+        titleLarge: TextStyle(
+            fontSize: 22, fontWeight: FontWeight.bold, color: onSurfaceColor),
+        titleMedium: TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w600, color: onSurfaceColor),
         bodyLarge: TextStyle(fontSize: 18, color: onSurfaceColor, height: 1.6),
         bodyMedium: TextStyle(fontSize: 16, color: secondaryColor, height: 1.5),
       ),

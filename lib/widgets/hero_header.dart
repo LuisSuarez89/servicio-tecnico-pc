@@ -28,11 +28,13 @@ class HeroHeader extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
                   color: Colors.white.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(30),
-                  border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
+                  border:
+                      Border.all(color: Colors.white.withValues(alpha: 0.3)),
                 ),
                 child: const Row(
                   mainAxisSize: MainAxisSize.min,
@@ -73,7 +75,8 @@ class HeroHeader extends StatelessWidget {
               const SizedBox(height: 48),
               ElevatedButton.icon(
                 onPressed: () async {
-                  final Uri url = Uri.parse('https://forms.gle/yTBEFvwE7Vud8mqeA');
+                  final Uri url =
+                      Uri.parse('https://forms.gle/yTBEFvwE7Vud8mqeA');
                   if (!await launchUrl(url)) {
                     // ignore: avoid_print
                     print('Could not launch $url');
@@ -82,8 +85,10 @@ class HeroHeader extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Theme.of(context).colorScheme.primary,
-                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                  textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                  textStyle: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 icon: const Icon(Icons.support_agent),
                 label: const Text('Solicitar Servicio Ahora'),

@@ -24,9 +24,12 @@ class _ServiceCardState extends State<ServiceCard> {
   }
 
   IconData _getIconForCategory(String title) {
-    if (title.toLowerCase().contains('mantenimiento')) return Icons.build_circle_outlined;
-    if (title.toLowerCase().contains('reparación')) return Icons.computer_outlined;
-    if (title.toLowerCase().contains('asesoría')) return Icons.support_agent_outlined;
+    if (title.toLowerCase().contains('mantenimiento'))
+      return Icons.build_circle_outlined;
+    if (title.toLowerCase().contains('reparación'))
+      return Icons.computer_outlined;
+    if (title.toLowerCase().contains('asesoría'))
+      return Icons.support_agent_outlined;
     return Icons.design_services_outlined;
   }
 
@@ -44,15 +47,18 @@ class _ServiceCardState extends State<ServiceCard> {
             color: Theme.of(context).colorScheme.surface,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              color: _isHovered 
-                  ? Theme.of(context).colorScheme.primary 
+              color: _isHovered
+                  ? Theme.of(context).colorScheme.primary
                   : const Color(0xFFE9ECEF),
               width: _isHovered ? 2.0 : 1.5,
             ),
             boxShadow: _isHovered
                 ? [
                     BoxShadow(
-                      color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.15),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withValues(alpha: 0.15),
                       blurRadius: 20,
                       offset: const Offset(0, 10),
                     )
@@ -74,7 +80,10 @@ class _ServiceCardState extends State<ServiceCard> {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Icon(

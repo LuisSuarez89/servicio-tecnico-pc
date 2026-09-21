@@ -112,64 +112,68 @@ class HomePage extends StatelessWidget {
           SliverToBoxAdapter(
             child: Container(
               color: Theme.of(context).colorScheme.primaryContainer,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 56),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 64),
               child: Center(
                 child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 800),
+                  constraints: const BoxConstraints(maxWidth: 1000),
                   child: Column(
                     children: [
                       Icon(
-                        Icons.facebook,
+                        Icons.forum_outlined,
                         size: 42,
                         color: Theme.of(context).colorScheme.primary,
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        'Síguenos en Facebook',
+                        'Contáctanos',
                         style: Theme.of(context).textTheme.displaySmall,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 12),
                       Text(
-                        'Conoce nuestras novedades y ponte en contacto con nosotros a través de nuestro perfil.',
+                        'Estamos listos para ayudarte con el diagnóstico y la solución de tus equipos.',
                         style: Theme.of(context).textTheme.titleMedium,
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 20),
-                      ElevatedButton.icon(
-                        onPressed: _openFacebookProfile,
-                        icon: const Icon(Icons.facebook),
-                        label: const Text('Visitar perfil de Facebook'),
+                      const SizedBox(height: 28),
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        spacing: 16,
+                        runSpacing: 16,
+                        children: [
+                          ElevatedButton.icon(
+                            onPressed: _openFacebookProfile,
+                            icon: const Icon(Icons.facebook),
+                            label: const Text('Facebook'),
+                          ),
+                          Tooltip(
+                            message: 'Número pendiente de confirmar',
+                            child: OutlinedButton.icon(
+                              onPressed: null,
+                              icon: const Icon(Icons.chat_outlined),
+                              label: const Text('WhatsApp · número pendiente'),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-
-          // 4. Footer Simple
-          SliverToBoxAdapter(
-            child: Container(
-              color: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 48),
-              child: Center(
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 800),
-                  child: Column(
-                    children: [
+                      const SizedBox(height: 32),
+                      const Divider(),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            Icons.location_on,
+                            Icons.location_on_outlined,
                             color: Theme.of(context).colorScheme.primary,
                           ),
                           const SizedBox(width: 8),
                           Flexible(
                             child: Text(
                               'Cobertura: Tocancipá, sus alrededores y el norte de Bogotá.',
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
+                                  ?.copyWith(
                                     fontWeight: FontWeight.bold,
                                   ),
                               textAlign: TextAlign.center,
@@ -177,10 +181,9 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 12),
                       Text(
-                        'Nota: Los valores pueden variar según repuestos, '
-                        'complejidad y servicio a domicilio.',
+                        'Los valores pueden variar según repuestos, complejidad y servicio a domicilio.',
                         style: Theme.of(context).textTheme.bodyMedium,
                         textAlign: TextAlign.center,
                       ),
