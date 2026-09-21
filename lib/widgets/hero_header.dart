@@ -40,7 +40,7 @@ class HeroHeader extends StatelessWidget {
                     Icon(Icons.star, color: Colors.amber, size: 20),
                     SizedBox(width: 8),
                     Text(
-                      'Soporte Técnico en Bogotá',
+                      'Soporte Técnico en Tocancipá',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
@@ -60,7 +60,8 @@ class HeroHeader extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               Text(
-                'Atendemos hogares, estudiantes, emprendedores y empresas. '
+                'Atendemos hogares, estudiantes, emprendedores y empresas en Tocancipá, '
+                'sus alrededores y el norte de Bogotá. '
                 'Nuestros técnicos ofrecen diagnóstico confiable, soluciones rápidas '
                 'y acompañamiento profesional para potenciar el rendimiento de tu tecnología.',
                 textAlign: TextAlign.center,

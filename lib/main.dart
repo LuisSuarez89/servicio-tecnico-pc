@@ -3,17 +3,17 @@ import 'theme/app_theme.dart';
 import 'screens/home_page.dart';
 
 void main() {
-  runApp(const ComputoBogotaApp());
+  runApp(const ComputoTocancipaApp());
 }
 
-class ComputoBogotaApp extends StatelessWidget {
-  const ComputoBogotaApp({super.key});
+class ComputoTocancipaApp extends StatelessWidget {
+  const ComputoTocancipaApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Servicios de Cómputo Bogotá',
+      title: 'Servicios de Cómputo Tocancipá',
       theme: AppTheme.lightTheme,
       home: const HomePage(),
     );
