@@ -10,11 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: subosito/flutter-action@v2
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'stable'
+          # A concrete version prevents the action from attempting to resolve
+          # the literal value "stable" as a Flutter release.
+          channel: stable
+          flutter-version: '3.38.0'
 
       - run: flutter pub get
       - run: flutter build web

@@ -94,6 +94,44 @@ class HomePage extends StatelessWidget {
             child: LocationMap(),
           ),
 
+          SliverToBoxAdapter(
+            child: Container(
+              color: Theme.of(context).colorScheme.primaryContainer,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 56),
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 800),
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.chat,
+                        size: 42,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Contáctanos vía WhatsApp',
+                        style: Theme.of(context).textTheme.displaySmall,
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        'Pronto podrás escribirnos directamente por WhatsApp para solicitar información o agendar un servicio.',
+                        style: Theme.of(context).textTheme.titleMedium,
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 20),
+                      const Chip(
+                        avatar: Icon(Icons.pending_outlined),
+                        label: Text('Número de contacto pendiente de confirmar'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+
           // 4. Footer Simple
           SliverToBoxAdapter(
             child: Container(

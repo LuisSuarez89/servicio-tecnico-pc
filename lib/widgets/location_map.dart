@@ -1,8 +1,8 @@
-import 'dart:html' as html;
-import 'dart:ui' as ui;
+import 'dart:ui_web' as ui_web;
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:web/web.dart' as web;
 
 const _mapViewType = 'tocancipa-location-map';
 const _locationUrl = 'https://maps.app.goo.gl/ceGNpM35q9QStABx8';
@@ -15,17 +15,24 @@ class LocationMap extends StatefulWidget {
 }
 
 class _LocationMapState extends State<LocationMap> {
+  static var _viewFactoryRegistered = false;
+
   @override
   void initState() {
     super.initState();
-    ui.platformViewRegistry.registerViewFactory(_mapViewType, (viewId) {
-      return html.IFrameElement()
+    if (_viewFactoryRegistered) {
+      return;
+    }
+
+    ui_web.platformViewRegistry.registerViewFactory(_mapViewType, (viewId) {
+      return web.HTMLIFrameElement()
         ..src = 'https://www.google.com/maps?q=Tocancip%C3%A1%2C%20Cundinamarca&z=13&output=embed'
         ..style.border = '0'
         ..style.height = '100%'
         ..style.width = '100%'
         ..title = 'Mapa de ubicación en Tocancipá';
     });
+    _viewFactoryRegistered = true;
   }
 
   Future<void> _openExactLocation() async {
