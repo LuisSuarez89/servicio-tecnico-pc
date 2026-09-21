@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../repositories/service_repository.dart';
 import '../widgets/hero_header.dart';
+import '../widgets/location_map.dart';
 import '../widgets/service_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 const SizedBox(width: 8),
-                const Text('Cómputo Bogotá'),
+                const Text('Cómputo Tocancipá'),
               ],
             ),
             // actions: [
@@ -89,6 +90,10 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
+          const SliverToBoxAdapter(
+            child: LocationMap(),
+          ),
+
           // 4. Footer Simple
           SliverToBoxAdapter(
             child: Container(
@@ -109,8 +114,7 @@ class HomePage extends StatelessWidget {
                           const SizedBox(width: 8),
                           Flexible(
                             child: Text(
-                              'Cobertura en Bogotá: Chapinero, Suba, Engativá, Teusaquillo, '
-                              'Kennedy, Usaquén y alrededores.',
+                              'Cobertura: Tocancipá, sus alrededores y el norte de Bogotá.',
                               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                                     fontWeight: FontWeight.bold,
                                   ),

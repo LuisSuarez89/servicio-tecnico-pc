@@ -1,4 +1,4 @@
-# Servicios de Cómputo Bogotá (Flutter Web)
+# Servicios de Cómputo Tocancipá (Flutter Web)
 
 Aplicación web construida con Flutter para mostrar servicios de:
 
@@ -6,7 +6,7 @@ Aplicación web construida con Flutter para mostrar servicios de:
 - Reparación
 - Asesoría
 
-Incluye tablas de precios orientadas al mercado de Bogotá.
+Incluye tablas de precios para Tocancipá, sus alrededores y el norte de Bogotá.
 
 ## Ejecutar localmente
 
