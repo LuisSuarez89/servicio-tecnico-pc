@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../repositories/service_repository.dart';
 import '../widgets/hero_header.dart';
 import '../widgets/location_map.dart';
@@ -6,6 +7,20 @@ import '../widgets/service_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
+
+  static const _facebookProfileUrl =
+      'https://www.facebook.com/profile.php?id=61589590780954';
+
+  Future<void> _openFacebookProfile() async {
+    final facebookProfile = Uri.parse(_facebookProfileUrl);
+    if (!await launchUrl(
+      facebookProfile,
+      mode: LaunchMode.externalApplication,
+    )) {
+      // ignore: avoid_print
+      print('Could not launch $facebookProfile');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,26 +119,27 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     children: [
                       Icon(
-                        Icons.chat,
+                        Icons.facebook,
                         size: 42,
                         color: Theme.of(context).colorScheme.primary,
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        'Contáctanos vía WhatsApp',
+                        'Síguenos en Facebook',
                         style: Theme.of(context).textTheme.displaySmall,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 12),
                       Text(
-                        'Pronto podrás escribirnos directamente por WhatsApp para solicitar información o agendar un servicio.',
+                        'Conoce nuestras novedades y ponte en contacto con nosotros a través de nuestro perfil.',
                         style: Theme.of(context).textTheme.titleMedium,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 20),
-                      const Chip(
-                        avatar: Icon(Icons.pending_outlined),
-                        label: Text('Número de contacto pendiente de confirmar'),
+                      ElevatedButton.icon(
+                        onPressed: _openFacebookProfile,
+                        icon: const Icon(Icons.facebook),
+                        label: const Text('Visitar perfil de Facebook'),
                       ),
                     ],
                   ),
