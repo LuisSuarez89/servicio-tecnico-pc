@@ -1,12 +1,12 @@
-# Servicios de Cómputo Tocancipá (Flutter Web)
+# Zeraus Tech (Flutter Web)
 
-Aplicación web construida con Flutter para mostrar servicios de:
+Aplicación web construida con Flutter para presentar los servicios de soporte técnico de Zeraus Tech:
 
 - Mantenimiento
 - Reparación
 - Asesoría
 
-Incluye tablas de precios para Tocancipá, sus alrededores y el norte de Bogotá.
+Atiende Tocancipá, sus alrededores y el norte de Bogotá.
 
 ## Ejecutar localmente
 

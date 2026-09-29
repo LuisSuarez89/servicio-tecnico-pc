@@ -4,6 +4,7 @@ import '../repositories/service_repository.dart';
 import '../widgets/hero_header.dart';
 import '../widgets/location_map.dart';
 import '../widgets/service_card.dart';
+import '../widgets/zeraus_logo.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -30,38 +31,34 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          // 1. App Bar flotante
           SliverAppBar(
             floating: true,
             pinned: true,
-            elevation: 2,
-            title: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(
-                  Icons.memory,
-                  color: Theme.of(context).colorScheme.primary,
+            elevation: 0,
+            title: const ZerausLogo(compact: true),
+            centerTitle: false,
+            actions: const [
+              Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Center(
+                  child: Text(
+                    'SOPORTE PARA PC',
+                    style: TextStyle(
+                      color: Color(0xFF9BDFFF),
+                      fontSize: 11,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
                 ),
-                const SizedBox(width: 8),
-                const Text('Cómputo Tocancipá'),
-              ],
-            ),
-            // actions: [
-            //   TextButton.icon(
-            //     onPressed: () {},
-            //     icon: const Icon(Icons.phone),
-            //     label: const Text('Contacto'),
-            //   ),
-            //   const SizedBox(width: 16),
-            // ],
+              ),
+            ],
           ),
 
-          // 2. Body con el Header Premium
           const SliverToBoxAdapter(
             child: HeroHeader(),
           ),
 
-          // 3. Grid / Lista de Servicios (responsive)
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 64),
             sliver: SliverToBoxAdapter(
@@ -72,13 +69,13 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'Nuestros Servicios',
+                        'Soluciones para tu tecnología',
                         style: Theme.of(context).textTheme.displayMedium,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        'Soluciones integrales diseñadas para ti',
+                        'Conoce los servicios que podemos realizar por ti.',
                         style: Theme.of(context).textTheme.titleLarge?.copyWith(
                               color: Theme.of(context).colorScheme.secondary,
                               fontWeight: FontWeight.normal,
@@ -86,14 +83,13 @@ class HomePage extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 48),
-                      // Usamos un Wrap para hacer un grid responsivo sin usar GridView explícito
                       Wrap(
                         spacing: 24,
                         runSpacing: 24,
                         alignment: WrapAlignment.center,
                         children: categories.map((category) {
                           return SizedBox(
-                            width: 350, // Ancho fijo responsivo
+                            width: 350,
                             child: ServiceCard(category: category),
                           );
                         }).toList(),
@@ -111,7 +107,7 @@ class HomePage extends StatelessWidget {
 
           SliverToBoxAdapter(
             child: Container(
-              color: Theme.of(context).colorScheme.primaryContainer,
+              color: const Color(0xFF081323),
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 64),
               child: Center(
                 child: ConstrainedBox(
@@ -125,7 +121,7 @@ class HomePage extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        'Contáctanos',
+                        'Hablemos de tu equipo',
                         style: Theme.of(context)
                             .textTheme
                             .displaySmall
@@ -134,7 +130,7 @@ class HomePage extends StatelessWidget {
                       ),
                       const SizedBox(height: 12),
                       Text(
-                        'Estamos listos para ayudarte con el diagnóstico y la solución de tus equipos.',
+                        'Cuéntanos qué necesitas y encontraremos la mejor solución para tu equipo.',
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium
@@ -153,11 +149,11 @@ class HomePage extends StatelessWidget {
                             label: const Text('Facebook'),
                           ),
                           Tooltip(
-                            message: 'Número pendiente de confirmar',
+                            message: 'Canal de WhatsApp próximo a habilitarse',
                             child: OutlinedButton.icon(
                               onPressed: null,
                               icon: const Icon(Icons.chat_outlined),
-                              label: const Text('WhatsApp · número pendiente'),
+                              label: const Text('WhatsApp · próximamente'),
                             ),
                           ),
                         ],
@@ -189,14 +185,6 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 12),
-                      Text(
-                        'Los valores pueden variar según repuestos, complejidad y servicio a domicilio.',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyMedium
-                            ?.copyWith(color: Colors.white),
-                        textAlign: TextAlign.center,
-                      ),
                     ],
                   ),
                 ),
