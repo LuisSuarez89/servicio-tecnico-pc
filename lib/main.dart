@@ -13,7 +13,7 @@ class ComputoTocancipaApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Zeraus Tech | Soporte técnico para PC',
+      title: 'Servicio técnico para PC y portátiles | Zeraus Tech',
       theme: AppTheme.lightTheme,
       home: const HomePage(),
     );

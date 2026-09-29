@@ -4,6 +4,7 @@ import '../repositories/service_repository.dart';
 import '../widgets/hero_header.dart';
 import '../widgets/location_map.dart';
 import '../widgets/service_card.dart';
+import '../widgets/seo_content.dart';
 import '../widgets/zeraus_logo.dart';
 
 class HomePage extends StatelessWidget {
@@ -69,13 +70,14 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'Soluciones para tu tecnología',
+                        'Mantenimiento y reparación de computadores',
                         style: Theme.of(context).textTheme.displayMedium,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        'Conoce los servicios que podemos realizar por ti.',
+                        'Servicios de soporte técnico para PC y portátiles en Tocancipá: '
+                        'prevención, reparación, optimización y asesoría para que tu tecnología funcione mejor.',
                         style: Theme.of(context).textTheme.titleLarge?.copyWith(
                               color: Theme.of(context).colorScheme.secondary,
                               fontWeight: FontWeight.normal,
@@ -99,6 +101,10 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+
+          const SliverToBoxAdapter(
+            child: SeoContent(),
           ),
 
           const SliverToBoxAdapter(
