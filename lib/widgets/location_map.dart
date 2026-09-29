@@ -47,7 +47,7 @@ class _LocationMapState extends State<LocationMap> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: const Color(0xFFEFF4FA),
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 64),
       child: Center(
         child: ConstrainedBox(
@@ -55,13 +55,13 @@ class _LocationMapState extends State<LocationMap> {
           child: Column(
             children: [
               Text(
-                'Nuestra ubicación',
+                'Estamos cerca de ti',
                 style: Theme.of(context).textTheme.displayMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 12),
               Text(
-                'Estamos ubicados en Tocancipá y atendemos sus alrededores y el norte de Bogotá.',
+                'Atendemos en Tocancipá, sus alrededores y el norte de Bogotá.',
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: Theme.of(context).colorScheme.secondary,
                       fontWeight: FontWeight.normal,
@@ -70,7 +70,7 @@ class _LocationMapState extends State<LocationMap> {
               ),
               const SizedBox(height: 32),
               ClipRRect(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(24),
                 child: SizedBox(
                   height: 380,
                   width: double.infinity,

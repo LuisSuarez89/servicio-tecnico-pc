@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/service_category.dart';
-import 'price_table_row.dart';
+import 'service_list_item.dart';
 
 class ServiceCard extends StatefulWidget {
   final ServiceCategory category;
@@ -25,11 +25,11 @@ class _ServiceCardState extends State<ServiceCard> {
 
   IconData _getIconForCategory(String title) {
     if (title.toLowerCase().contains('mantenimiento'))
-      return Icons.build_circle_outlined;
+      return Icons.settings_suggest_outlined;
     if (title.toLowerCase().contains('reparación'))
-      return Icons.computer_outlined;
+      return Icons.desktop_windows_outlined;
     if (title.toLowerCase().contains('asesoría'))
-      return Icons.support_agent_outlined;
+      return Icons.lightbulb_outline_rounded;
     return Icons.design_services_outlined;
   }
 
@@ -45,12 +45,12 @@ class _ServiceCardState extends State<ServiceCard> {
         child: Container(
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.surface,
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(24),
             border: Border.all(
               color: _isHovered
                   ? Theme.of(context).colorScheme.primary
-                  : const Color(0xFFE9ECEF),
-              width: _isHovered ? 2.0 : 1.5,
+                  : const Color(0xFFE3EAF4),
+              width: _isHovered ? 1.5 : 1,
             ),
             boxShadow: _isHovered
                 ? [
@@ -71,7 +71,7 @@ class _ServiceCardState extends State<ServiceCard> {
                     )
                   ],
           ),
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(28),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -84,7 +84,7 @@ class _ServiceCardState extends State<ServiceCard> {
                           .colorScheme
                           .primary
                           .withValues(alpha: 0.1),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(14),
                     ),
                     child: Icon(
                       _getIconForCategory(widget.category.title),
@@ -107,9 +107,9 @@ class _ServiceCardState extends State<ServiceCard> {
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
               const SizedBox(height: 24),
-              const Divider(color: Color(0xFFE9ECEF), thickness: 1.5),
+              const Divider(color: Color(0xFFE3EAF4), thickness: 1),
               const SizedBox(height: 16),
-              ...widget.category.items.map((item) => PriceTableRow(item: item)),
+              ...widget.category.items.map((item) => ServiceListItem(item: item)),
             ],
           ),
         ),

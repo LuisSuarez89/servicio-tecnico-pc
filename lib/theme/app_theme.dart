@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const Color primaryColor =
-      Color(0xFF0D6EFD); // Un azul moderno y vibrante
-  static const Color secondaryColor = Color(0xFF6C757D);
-  static const Color backgroundColor = Color(0xFFF8F9FA);
+  static const Color primaryColor = Color(0xFF168DFF);
+  static const Color secondaryColor = Color(0xFF63718B);
+  static const Color backgroundColor = Color(0xFFF4F7FC);
   static const Color surfaceColor = Colors.white;
   static const Color onPrimaryColor = Colors.white;
   static const Color onSurfaceColor = Color(0xFF212529);
@@ -15,19 +14,20 @@ class AppTheme {
       colorScheme: const ColorScheme.light(
         primary: primaryColor,
         secondary: secondaryColor,
+        primaryContainer: Color(0xFF081323),
         surface: surfaceColor,
         onPrimary: onPrimaryColor,
         onSurface: onSurfaceColor,
       ),
       scaffoldBackgroundColor: backgroundColor,
       appBarTheme: const AppBarTheme(
-        backgroundColor: surfaceColor,
-        foregroundColor: primaryColor,
+        backgroundColor: const Color(0xFF081323),
+        foregroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        iconTheme: IconThemeData(color: primaryColor),
+        iconTheme: IconThemeData(color: Colors.white),
         titleTextStyle: TextStyle(
-          color: primaryColor,
+          color: Colors.white,
           fontSize: 22,
           fontWeight: FontWeight.bold,
           letterSpacing: -0.5,
@@ -36,7 +36,7 @@ class AppTheme {
       textTheme: const TextTheme(
         displayLarge: TextStyle(
             fontSize: 48,
-            fontWeight: FontWeight.w900,
+            fontWeight: FontWeight.w800,
             color: onSurfaceColor,
             letterSpacing: -1.5),
         displayMedium: TextStyle(
@@ -62,18 +62,18 @@ class AppTheme {
         color: surfaceColor,
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-          side: const BorderSide(color: Color(0xFFE9ECEF), width: 1.5),
+          borderRadius: BorderRadius.circular(24),
+          side: const BorderSide(color: Color(0xFFE3EAF4), width: 1),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: primaryColor,
           foregroundColor: onPrimaryColor,
-          elevation: 2,
+          elevation: 0,
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(14),
           ),
           textStyle: const TextStyle(
             fontSize: 16,
