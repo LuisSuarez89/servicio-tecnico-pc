@@ -31,7 +31,7 @@ class HeroHeader extends StatelessWidget {
               const _Eyebrow(),
               const SizedBox(height: 18),
               Text(
-                'Tecnología lista para lo que sigue.',
+                'Servicio técnico para PC y portátiles en Tocancipá.',
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.displayMedium?.copyWith(
                       color: Colors.white,
@@ -39,9 +39,9 @@ class HeroHeader extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               Text(
-                'En Zeraus Tech cuidamos, optimizamos y recuperamos tus equipos. '
-                'Soporte técnico claro y confiable para hogares, estudiantes, '
-                'emprendedores y empresas.',
+                'Reparamos, optimizamos y hacemos mantenimiento de computadores '
+                'para hogares, estudiantes, emprendedores y empresas en Tocancipá '
+                'y el norte de Bogotá.',
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: Colors.white.withValues(alpha: 0.9),
@@ -67,7 +67,7 @@ class HeroHeader extends StatelessWidget {
                       fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 icon: const Icon(Icons.arrow_forward_rounded),
-                label: const Text('Solicitar diagnóstico'),
+                label: const Text('Solicitar diagnóstico de tu PC'),
               ),
             ],
           ),
