@@ -18,3 +18,11 @@ Atiende Tocancipá, sus alrededores y el norte de Bogotá.
 flutter pub get
 flutter run -d chrome
 ```
+
+## Sitemap y Google Search Console
+
+El sitio publica el sitemap en:
+
+`https://luissuarez89.github.io/servicio-tecnico-pc/sitemap.xml`
+
+Después de desplegar los cambios, envía `sitemap.xml` en la sección **Sitemaps** de Google Search Console. El archivo `robots.txt` también anuncia la URL del sitemap.

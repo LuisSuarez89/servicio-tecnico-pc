@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://luissuarez89.github.io/servicio-tecnico-pc/sitemap.xml
