@@ -12,6 +12,8 @@ class HomePage extends StatelessWidget {
 
   static const _facebookProfileUrl =
       'https://www.facebook.com/profile.php?id=61589590780954';
+  static const _instagramProfileUrl =
+      'https://www.instagram.com/zeraus.tech/';
 
   Future<void> _openFacebookProfile() async {
     final facebookProfile = Uri.parse(_facebookProfileUrl);
@@ -21,6 +23,17 @@ class HomePage extends StatelessWidget {
     )) {
       // ignore: avoid_print
       print('Could not launch $facebookProfile');
+    }
+  }
+
+  Future<void> _openInstagramProfile() async {
+    final instagramProfile = Uri.parse(_instagramProfileUrl);
+    if (!await launchUrl(
+      instagramProfile,
+      mode: LaunchMode.externalApplication,
+    )) {
+      // ignore: avoid_print
+      print('Could not launch $instagramProfile');
     }
   }
 
@@ -154,9 +167,19 @@ class HomePage extends StatelessWidget {
                             icon: const Icon(Icons.facebook),
                             label: const Text('Facebook'),
                           ),
+                          ElevatedButton.icon(
+                            onPressed: _openInstagramProfile,
+                            icon: const Icon(Icons.camera_alt_outlined),
+                            label: const Text('Instagram'),
+                          ),
                           Tooltip(
                             message: 'Canal de WhatsApp próximo a habilitarse',
                             child: OutlinedButton.icon(
+                              style: OutlinedButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                disabledForegroundColor: Colors.white,
+                                side: const BorderSide(color: Colors.white54),
+                              ),
                               onPressed: null,
                               icon: const Icon(Icons.chat_outlined),
                               label: const Text('WhatsApp · próximamente'),
