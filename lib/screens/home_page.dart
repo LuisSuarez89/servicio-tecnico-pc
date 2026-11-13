@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../repositories/service_repository.dart';
+import '../widgets/about_section.dart';
 import '../widgets/hero_header.dart';
 import '../widgets/location_map.dart';
 import '../widgets/service_card.dart';
@@ -71,6 +72,10 @@ class HomePage extends StatelessWidget {
 
           const SliverToBoxAdapter(
             child: HeroHeader(),
+          ),
+
+          const SliverToBoxAdapter(
+            child: AboutSection(),
           ),
 
           SliverPadding(
